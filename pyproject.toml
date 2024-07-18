@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-latte"
+description = "Nodes:LatteVideoGenerator"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["diffusers @ git+https://github.com/huggingface/diffusers.git"]
+
+[project.urls]
+Repository = "https://github.com/RhizoNymph/ComfyUI-Latte"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Latte"
+Icon = ""

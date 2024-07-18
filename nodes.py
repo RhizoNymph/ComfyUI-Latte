@@ -119,9 +119,6 @@ class LatteVideoGenerator:
         # Reorder to (F, H, W, C) for compatibility with ComfyUI
         batch_tensor = batch_tensor.permute(0, 2, 3, 1)
         
-        print(f"Tensor shape: {batch_tensor.shape}")
-        print(f"Tensor dtype: {batch_tensor.dtype}")
-        
         # Offload model if needed
         self.pipe.to(self.offload_device)
         mm.soft_empty_cache()

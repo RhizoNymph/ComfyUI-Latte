@@ -55,7 +55,6 @@ class LatteVideoGenerator:
                 }),
             },
             "optional": {
-                "image": ("IMAGE", )
             }
         }
 
@@ -73,7 +72,7 @@ class LatteVideoGenerator:
             self.pipe = LattePipeline.from_pretrained("maxin-cn/Latte-1", torch_dtype=torch.float16).to(self.device)
             self.pipe.enable_model_cpu_offload()
 
-    def generate_video(self, prompt, negative_prompt, num_inference_steps, guidance_scale, video_length, width, height, num_images_per_prompt, seed, image=None):
+    def generate_video(self, prompt, negative_prompt, num_inference_steps, guidance_scale, video_length, width, height, num_images_per_prompt, seed):
         self.load_model()
 
         if seed == -1:
@@ -91,9 +90,6 @@ class LatteVideoGenerator:
             "num_images_per_prompt": num_images_per_prompt,
             "generator": generator
         }
-
-        if image is not None:
-            kwargs["image"] = self.prepare_image(image)
 
         output = self.pipe(**kwargs)
         videos = output.frames

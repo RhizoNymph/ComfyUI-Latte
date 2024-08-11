@@ -10,6 +10,6 @@ Repository = "https://github.com/RhizoNymph/ComfyUI-Latte"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "RhizoNymph"
+PublisherId = "rhizonymph"
 DisplayName = "ComfyUI-Latte"
 Icon = ""

@@ -1,5 +1,5 @@
 [project]
-name = "ComfyUI-Latte"
+name = "comfyui-latte"
 description = "Nodes to use [a/latte](https://github.com/Vchitect/Latte) for text to video generation"
 version = "1.0.0"
 license = {file = "LICENSE"}
